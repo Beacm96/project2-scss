@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as v;
+
+main {
+  position: relative;
+  min-height: 750px;
+}
+
+.bloque1 {
+  position: relative;
+  z-index: 4;
+  width: 82%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.container1 {
+  padding-top: 105px;
+
+  h1 {
+    margin-bottom: 25px;
+    color: v.$white;
+    font-family: v.$font-title;
+    font-size: clamp(48px, 4vw, 68px);
+    line-height: 1.16;
+    font-weight: 700;
+    letter-spacing: -.8px;
+  }
+
+  p {
+    margin-bottom: 28px;
+    color: v.$text-grey;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .button1,
+  .button2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .button1 {
+    width: 190px;
+    margin-right: 20px;
+    border-radius: 9px;
+    background: v.$pink;
+    color: v.$white;
+  }
+
+  .button2 {
+    color: v.$white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  > img {
+    display: inline-block;
+    width: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+}

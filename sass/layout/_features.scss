@@ -1,0 +1,168 @@
+@use '../abstracts/variables' as v;
+
+.bloque2 {
+  position: absolute;
+  z-index: 5;
+  left: 9%;
+  bottom: 72px;
+}
+
+.aside_list {
+  display: flex;
+  gap: 50px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+
+  a {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: v.$icon-background;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  span {
+    max-width: 100px;
+    color: v.$white;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}
+
+.bloque3 {
+  position: absolute;
+  z-index: 2;
+  top: 55px;
+  right: 5%;
+  width: 620px;
+  height: 670px;
+}
+
+.container3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  &::before {
+    width: 590px;
+    height: 590px;
+    left: 55px;
+    top: 100px;
+  }
+
+  &::after {
+    width: 760px;
+    height: 760px;
+    left: 250px;
+    top: 70px;
+  }
+
+  img {
+    position: absolute;
+    object-fit: contain;
+    z-index: 2;
+  }
+
+  img:nth-child(1) {
+    width: 190px;
+    left: 0;
+    top: 30px;
+  }
+
+  img:nth-child(2) {
+    width: 190px;
+    left: 215px;
+    top: 30px;
+  }
+
+  img:nth-child(3) {
+    width: 190px;
+    right: 0;
+    top: 135px;
+  }
+
+  img:nth-child(4) {
+    width: 190px;
+    left: 215px;
+    top: 245px;
+  }
+
+  img:nth-child(5) {
+    width: 190px;
+    left: 0;
+    top: 455px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .bloque3 {
+    opacity: .35;
+    right: -120px;
+  }
+}
+
+@media (max-width: 760px) {
+  .header_principal .container {
+    width: 90%;
+  }
+
+  .header_nav {
+    display: none;
+  }
+
+  .bloque1 {
+    width: 90%;
+  }
+
+  .container1 {
+    padding-top: 70px;
+
+    h1 {
+      font-size: 46px;
+    }
+
+    p br {
+      display: none;
+    }
+  }
+
+  .bloque3 {
+    display: none;
+  }
+
+  .bloque2 {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 90%;
+    margin: 70px auto 0;
+  }
+
+  .aside_list {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

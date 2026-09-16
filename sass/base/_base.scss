@@ -1,0 +1,19 @@
+@use 'animations';
+@use 'reset';
+@use 'typography';
+@use '../abstracts/variables' as v;
+
+body {
+  font-family: v.$font-main;
+  background: #202126;
+}
+
+.background {
+  position: relative;
+  width: calc(100% - 24px);
+  max-width: 1510px;
+  min-height: 850px;
+  margin: 12px auto;
+  background-color: v.$background;
+  overflow: hidden;
+}
